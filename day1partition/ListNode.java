@@ -1,4 +1,4 @@
-package fa21interviewprep.day1partition;
+package day1partition;
 
 /**
  * Definition for singly-linked list.

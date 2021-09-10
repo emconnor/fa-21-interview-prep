@@ -1,4 +1,4 @@
-package fa21interviewprep.day1partition;
+package day1partition;
 
 /**
  * Partition: Write code to partition a linked list around a value x, such that
