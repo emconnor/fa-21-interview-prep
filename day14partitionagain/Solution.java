@@ -1,4 +1,4 @@
-package day1partition;
+package day14partitionagain;
 
 /**
  * Partition: Write code to partition a linked list around a value x, such that
@@ -10,31 +10,35 @@ package day1partition;
 
 class Solution {
     public ListNode partition(ListNode node, int p) {
-        ListNode dummy = new ListNode();
-        dummy.next = node;
-        // initialize r pointer to first value >= p
-        ListNode r = dummy.next;
-        while ((r != null) && (r.val < p)) {
-            r = r.next;
+
+      if (node == null) {
+        System.out.println("null node");
+        return null;
+      }
+      
+      ListNode dummy = new ListNode();
+      dummy.next = node;
+      ListNode r = dummy.next;
+
+      while(r != null && r.val < p) {
+        r = r.next;
+      }
+
+      ListNode c;
+      ListNode t;
+
+      while (r != null && r.next != null) {
+        c = r.next;
+        if (c.val > p) {
+          r = c;
+        } else {
+          r.next = c.next;
+          t = dummy.next;
+          dummy.next = c;
+          c.next = t;
         }
-        // loop until we run out of unknown values
-        ListNode c;
-        ListNode t;
-        while ((r != null) && (r.next != null)) {
-            c = r.next;
-            if (c.val > p) {
-                // handle right side value
-                r = c;
-            } else {
-                // handle left side value
-                r.next = c.next;
-                t = dummy.next;
-                dummy.next = c;
-                c.next = t;
-            }
-        }
-        // pop off the dummy
-        return dummy.next;
+      }
+      return dummy.next;
     }
 
     public static void main(String[] args) {
