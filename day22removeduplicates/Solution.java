@@ -9,26 +9,23 @@ class Solution {
     
     public ListNode removeDuplicates(ListNode node) {
 
-      if (node == null) {
-        System.out.println("Error: list null");
-        return null;
-      } 
-
-      // make pointer nodes that both point to node 
+       
       ListNode first = node;
-      ListNode second = null;
+      ListNode temp = null;
 
       while (first != null && first.next != null) {
-        second = first;
-        while (second.next != null) {
-          if (first.val == second.next.val) {
-            second.next = second.next.next;
-          } else {
-            second = second.next;
+        if (first.val == first.next.val) {
+          temp = first.next.next;
+          if (temp == null) {
+            first.next = null;
+            break;
           }
+          first.next = temp;
         }
-      first = first.next;
-    }
+        if (first.val != first.next.val) {
+          first = first.next;
+        }
+      }
       return node;
     }
   
