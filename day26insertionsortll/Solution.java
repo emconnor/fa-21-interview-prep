@@ -18,13 +18,13 @@ class Solution {
       // Initialize partially sorted list
       ListNode dummy = new ListNode(0), prev = dummy, current = head;
 
-      while(current != null)
+      while (current != null)
       {
-          if(prev.val > current.val)
+          if (prev.val > current.val)
               prev = dummy;
 
           // Find the right place to insert current node
-          while(prev.next != null && prev.next.val < current.val)
+          while (prev.next != null && prev.next.val < current.val)
               prev = prev.next;
 
           // Insert current between prev and prev.next
