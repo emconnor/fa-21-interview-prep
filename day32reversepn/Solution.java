@@ -60,8 +60,8 @@ class Solution {
   
     public static void main(String[] args) {
       String[] tokens = {"2","1","+","3","*"};
-      String[] tokens2 = {"4","13","5","/","+"};
-      String[] tokens3 = {"10","6","9","3","+","-11","*","/","*","17","+","5","+"};
+      // String[] tokens2 = {"4","13","5","/","+"};
+      // String[] tokens3 = {"10","6","9","3","+","-11","*","/","*","17","+","5","+"};
       Solution s = new Solution();
       int result = s.evalPRN(tokens);
       System.out.println(result);

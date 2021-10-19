@@ -1,5 +1,4 @@
 package day22removeduplicates;
-import java.util.Stack;
 
 /**
  * Given a linked list, remove the n-th node from the end of list and return its head.

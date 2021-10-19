@@ -1,7 +1,5 @@
 package day13removeinstances;
 
-import java.util.Stack;
-
 /**
  * Given a linked list and a value x, remove all instances of x from the linked list
  */

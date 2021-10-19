@@ -1,6 +1,5 @@
 package day31nextgreatestnode;
 import java.util.Arrays;
-import java.util.Stack;
 
 /**
  * We are given a linked list with head as the first node. Let's number the nodes in the list: 
