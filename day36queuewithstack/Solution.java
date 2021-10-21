@@ -63,8 +63,6 @@ public class Solution {
     s.qPush(2);
     //s.qPop();
     System.out.println(s.qPeek());
-
-    
   }
 }
 
